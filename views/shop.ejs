@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prints from palestine - Shop</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title">prints from palestine</h1>
+        </header>
+        <div class="content-area">
+            <main>
+                <div class="product-row">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/squareprintslogo.png" alt="Product 1 Image">
+                        </div>
+                        <div class="product-details">
+                            <h2>Mass Migration Tee</h2>
+                            <p>your mom's favorite t-shirt.</p>
+                            <select name="product-size" class="product-size">
+                                <option value="">Select size</option>
+                                <option value="s">Small</option>
+                                <option value="m">Medium</option>
+                                <option value="l">Large</option>
+                                <option value="xl">Extra Large</option>
+                            </select>
+                            <a href="#" class="buy-button">Buy Now</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/squareprintslogo.png" alt="Product 1 Image">
+                        </div>
+                        <div class="product-details">
+                            <h2>Mass Migration Longsleeve</h2>
+                            <p>your mom's favorite longsleeve.</p>
+                            <select name="product-size" class="product-size">
+                                <option value="">Select size</option>
+                                <option value="s">Small</option>
+                                <option value="m">Medium</option>
+                                <option value="l">Large</option>
+                                <option value="xl">Extra Large</option>
+                            </select>
+                            <a href="#" class="buy-button">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <div class="about-area">
+            <div id="about">
+                <h1>About Us</h1>
+                <% faqs.forEach(faq => { %>
+                    <div class="faq-item">
+                        <h2 class="faq-question"><%= faq.question %></h2>
+                        <p class="faq-answer" style="display:none;"><%= faq.answer %></p>
+                    </div>
+                <% }); %>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="#about" class="about-link">About Us</a>
+        <a href="https://www.instagram.com/printsfrompalestine" class="instagram-link">Instagram</a>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var faqQuestions = document.querySelectorAll('.faq-question');
+
+            faqQuestions.forEach(function(question) {
+                question.addEventListener('click', function() {
+                    var answer = this.nextElementSibling;
+                    if (answer.style.display === "none") {
+                        answer.style.display = "block";
+                    } else {
+                        answer.style.display = "none";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
