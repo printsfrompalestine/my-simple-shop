@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
 app.post('/login', (req, res) => {
     const password = req.body.password;
 
-    if (password === 'zuckfionists') {
+    if (password === 'preefalestine') {
         req.session.loggedIn = true;
         res.redirect('/shop');
     } else {
