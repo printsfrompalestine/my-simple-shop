@@ -41,9 +41,9 @@ app.post('/login', (req, res) => {
 app.get('/shop', (req, res) => {
     if (req.session.loggedIn) {
         const faqs = [
-            { question: 'WHO ARE WE?', answer: 'can you read?' },
-            {question: 'WHAT DO WE DO?', answer: 'sell shirts. donate profits.'},
-            {question: 'HOW DO I KNOW THE PROFITS GET DONATED?', answer: 'wallah they get donated.' },
+            { question: 'WILL THERE BE RESTOCKS?', answer: 'no, once a design is sold out it will not be restocked.' },
+            {question: 'WHERE DO WE SHIP?', answer: 'united states addresses only.'},
+            {question: 'HOW DO I KNOW THE PROFITS GET DONATED?', answer: 'once made, donations will be posted onto our instagram.' },
             {question: 'WHAT IS YOUR REFUND POLICY?', answer: 'no refunds or exchanges, sorry.' }
         ];
         res.render('shop', { faqs });
